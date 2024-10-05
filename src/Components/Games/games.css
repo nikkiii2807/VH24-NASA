@@ -1,0 +1,48 @@
+.games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 80px 10%;
+}
+
+.title-box {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.game-image {
+    width: 25%; /* Set the image width to 100% of the grid item */
+    height: 20; /* Maintain aspect ratio */
+    max-width: 5px; /* Limit max width */
+    border-radius: 10px; /* Add border radius for better aesthetics */
+}
+
+@media (max-width: 78px) {
+    .grid {
+        grid-template-columns: 1fr 1fr; /* Adjust grid for smaller screens */
+    }
+
+    .game-image {
+        max-width: 15px; /* Adjust max width for smaller screens */
+    }
+}
